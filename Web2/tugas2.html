@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <style type="text/css">
+        *{
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0b87ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form{
+           width: 500px; 
+           border: 2px solid #ccc;
+           padding: 40px;
+           background: #fff;
+           border-radius: 15px;
+        }
+        input{
+            display: block;
+            border: 2px solid #ccc;
+            width: 95%;
+            padding: 10px;
+            margin: 10px auto;
+        }
+        textarea{
+            display: block;
+            border: 2px solid #ccc;
+            width: 95%;
+            padding: 10px;
+            margin: 10px auto;
+        }
+        label{
+            color: #888;
+            font-size: 18px;
+            padding: 10px;
+        }
+        button{
+            float: right;
+            background: #0b87ff;
+            padding: 10px 15px;
+            color: #fff;
+            border-radius: 5px;
+            margin-right: 10px;
+            border: none;
+        }
+        button:hover{
+            opacity: .7;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir Pendaftaran</h1>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Kata Sandi:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <button type="button" onclick="validateForm()">Daftar</button>
+        </form>
+    </div>
+
+    <script type = "text/javascript">
+        function validateForm() {
+            var Nama = document.getElementById('nama').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var successMessage = ("Pendaftaran sukses!");
+
+            if (nama === '' || email ==='' ||password ==='')
+            {
+                alert('Silakan isi semua kolom!');
+            } 
+            else {
+                alert("Pendaftaran sukses! Anda dapat mengirim data ke server di sini.");
+            
+            }
+        }
+
+    
+    </script>
+</body>
+</html>
